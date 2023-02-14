@@ -84,7 +84,6 @@ input.src{
     padding: 5px 10px 5px 20px;
     background-color: #fffcfc44;
     color: gold;
-    float: center;
     font: 14px;
     letter-spacing: 1px;
     text-align:center;
@@ -218,17 +217,14 @@ textarea{
 }
 
 label{
-    display: block; 
-    float: center;  
+    display: block;  
 }
 
 button{
     height: 40px; 
-    padding-left: 0px 5px; 
-    margin-bottom: 20px 0px;   
+    margin-bottom: 20px;   
     text-transform: uppercase;
     background-color: #d90367bd; 
-    border-color: 1px solid #D90368; 
     border-style: solid; 
     border-radius: 10px;  
     width: 420px;   
