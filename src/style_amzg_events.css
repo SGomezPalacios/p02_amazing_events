@@ -15,7 +15,6 @@ body{
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
-
 }
 
 .header{
@@ -278,6 +277,7 @@ span{
     background-color: #fbfbfb9d;
     height: auto;
     border-radius: 5px;
+    border: hidden;
 }
 
 th{
@@ -297,43 +297,49 @@ table .center{
     text-align: center;
 }
 
-.dtls{
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 500px;
-    margin: 80px auto;
-    border-radius: 10px;    
-    background-color: #fffcfc44; 
-    padding-left: 30px; 
-}
-.card-img{
+/* Card details */
+.box-container{
     display: flex;
-    object-fit: cover;
-    object-position: center;
-    padding: 6px;
-    width: 0%;
-} 
-.card-dtls{ 
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    padding: 0px 20px; 
+}
+.card-container{
     display: flex;
-    flex-direction: column;
+    width: 700px;
+    height: auto;
+    background-color: #fffcfc44;
+    border-radius: 2px;
+    padding: 50px;
+}
+.card-header{
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
 }
 
-.card-dtls h4{
-    color: gold;
+.card-description{
+    padding: 20px;
 }
-.card-dtls p{
-    color:gold;
-    font-size: 20px;
-
+.card-header a{
+    position: relative;
+    display: block;
 }
-
-.card-dtls a{
-    font-size: 25px;
-    color: #2e294e;
+.card-header img{
+    margin: 20px;
+}
+.card-header h2{
     font-weight: bold;
-    text-shadow: 10px 2px 15px rgb(255, 253, 240), 5px 2px 15px rgb(248, 245, 226);
 }
+.card-description{
+    position: relative;
+}
+.card-description p{
+    margin: 20px;
+}
+
+
 
 @media only screen and (max-width: 720px){
     nav{
@@ -389,30 +395,79 @@ table .center{
         height: 25px;
         margin: 0px 20px;
     }
-    .dtls{
+
+    .box-container{
+
+        width: 100%; 
+    }
+    .card-container{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center; 
-        padding-left:0px;
-        width: auto; 
+        width: 100%;
+        padding: 0;
     }
-    .card-img{
-        display: flex;
-    
-    } 
-    .card-dtls{ 
-        width: 250px;
+    .card-header{
+        border: none;
     }
     
-    .card-dtls h4{
-        font-size: 15px;
+    .card-description{
+        text-align: center;
     }
-    .card-dtls p{
-        font-size: 13px;
+    .card-header img{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .card-description p{
+        margin: 0;
+    }
+
+    .contact_form{  
+        max-width: 100%; 
+        height: auto;
+        margin: 0;
+        padding: 10px;
     }
     
-    .card-dtls a{
-        font-size: 15px;
+    .formulario input{
+        background-color: #fbfbfb9d; 
+        width: 100%; 
+        height: 40px;   
+        color: #2e294e;  
+    }
+    
+    textarea{
+        background-color: #fbfbfb9d; 
+        width: 100%; 
+        height: 150px; 
+        border-radius: 5px;  
+        border-style: solid; 
+        border-width: 1px; 
+        border-color: #D90368;
+    }
+    
+    label{
+        display: block;  
+    }
+    
+    button{
+        height: 40px; 
+        margin-bottom: 20px;   
+        text-transform: uppercase;
+        background-color: #d90367bd; 
+        border-style: solid; 
+        border-radius: 10px;  
+        width: 90%;   
+        cursor: pointer;
+    }
+        
+    span{
+        color: #2e294e; 
+    }
+    
+    .contact_form p{
+        font-size: 13px; 
+        color: #2e294e; 
     }
 }
