@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    color: #efb810;
+    color: #dfc474;
     font-family: 'Josefin Sans', sans-serif;
 }
 body{
@@ -284,7 +284,6 @@ span{
 
 th{
     padding: 15px;
-    color: #efb810;
     font-size: 20px;
 }
 td {
@@ -379,8 +378,9 @@ table .center{
     }
     th{
         padding: 10px;
-        color: #efb810;
-        font-size: 15px;
+        font-size: 18px;
+        font-weight: bolder;
+        color: #2e294e98;
     }
     td {
     
@@ -507,5 +507,7 @@ table .center{
         flex-direction: row;
         align-items: center;
         justify-content: center;
+        background-color: #2e294e98;
+        width: 100%;
     }
 }
