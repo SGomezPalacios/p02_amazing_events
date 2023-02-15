@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    color: gold;
+    color: #efb810;
     font-family: 'Josefin Sans', sans-serif;
 }
 body{
@@ -29,7 +29,7 @@ nav{
 
 .logo{
     max-width: 250px;
-    filter: drop-shadow(5px 5px 15px gold);
+    filter: drop-shadow(5px 5px 15px #efb810);
     padding-left: 50px;
 }
 
@@ -37,6 +37,8 @@ nav ul li{
     list-style-type: none;
     display: inline-block;
     padding: 10px 20px;
+    font-size: 20px;
+    margin: 0;
 }
 
 .slice{
@@ -82,7 +84,7 @@ nav ul li{
 input.src{
     padding: 5px 10px 5px 20px;
     background-color: #fffcfc44;
-    color: gold;
+    color: #efb810;
     font: 14px;
     letter-spacing: 1px;
     text-align:center;
@@ -282,7 +284,7 @@ span{
 
 th{
     padding: 15px;
-    color: gold;
+    color: #efb810;
     font-size: 20px;
 }
 td {
@@ -377,7 +379,7 @@ table .center{
     }
     th{
         padding: 10px;
-        color: gold;
+        color: #efb810;
         font-size: 15px;
     }
     td {
@@ -469,5 +471,41 @@ table .center{
     .contact_form p{
         font-size: 13px; 
         color: #2e294e; 
+    }
+}
+@media only screen and (max-width: 763px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .logo{
+        max-width: 250px;
+        filter: drop-shadow(5px 5px 15px #efb810);
+        padding: 10px 0px;
+    }
+    
+    nav ul li{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 5px;
+        font-size: 18px;
+        margin: 0px;
+    }
+    nav ul{
+        margin-bottom:0px;
+        padding-left: 0px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 }
