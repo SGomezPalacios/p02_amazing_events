@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    color: gold;
+    color: #dfc474;
     font-family: 'Josefin Sans', sans-serif;
 }
 body{
@@ -15,7 +15,6 @@ body{
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
-
 }
 
 .header{
@@ -30,7 +29,7 @@ nav{
 
 .logo{
     max-width: 250px;
-    filter: drop-shadow(5px 5px 15px gold);
+    filter: drop-shadow(5px 5px 15px #efb810);
     padding-left: 50px;
 }
 
@@ -38,6 +37,8 @@ nav ul li{
     list-style-type: none;
     display: inline-block;
     padding: 10px 20px;
+    font-size: 20px;
+    margin: 0;
 }
 
 .slice{
@@ -83,7 +84,7 @@ nav ul li{
 input.src{
     padding: 5px 10px 5px 20px;
     background-color: #fffcfc44;
-    color: gold;
+    color: #efb810;
     font: 14px;
     letter-spacing: 1px;
     text-align:center;
@@ -278,11 +279,11 @@ span{
     background-color: #fbfbfb9d;
     height: auto;
     border-radius: 5px;
+    border: hidden;
 }
 
 th{
     padding: 15px;
-    color: gold;
     font-size: 20px;
 }
 td {
@@ -297,43 +298,49 @@ table .center{
     text-align: center;
 }
 
-.dtls{
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    width: 500px;
-    margin: 80px auto;
-    border-radius: 10px;    
-    background-color: #fffcfc44; 
-    padding-left: 30px; 
-}
-.card-img{
+/* Card details */
+.box-container{
     display: flex;
-    object-fit: cover;
-    object-position: center;
-    padding: 6px;
-    width: 0%;
-} 
-.card-dtls{ 
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    padding: 0px 20px; 
+}
+.card-container{
     display: flex;
-    flex-direction: column;
+    width: 700px;
+    height: auto;
+    background-color: #fffcfc44;
+    border-radius: 2px;
+    padding: 50px;
+}
+.card-header{
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
 }
 
-.card-dtls h4{
-    color: gold;
+.card-description{
+    padding: 20px;
 }
-.card-dtls p{
-    color:gold;
-    font-size: 20px;
-
+.card-header a{
+    position: relative;
+    display: block;
 }
-
-.card-dtls a{
-    font-size: 25px;
-    color: #2e294e;
+.card-header img{
+    margin: 20px;
+}
+.card-header h2{
     font-weight: bold;
-    text-shadow: 10px 2px 15px rgb(255, 253, 240), 5px 2px 15px rgb(248, 245, 226);
 }
+.card-description{
+    position: relative;
+}
+.card-description p{
+    margin: 20px;
+}
+
+
 
 @media only screen and (max-width: 720px){
     nav{
@@ -371,8 +378,9 @@ table .center{
     }
     th{
         padding: 10px;
-        color: gold;
-        font-size: 15px;
+        font-size: 18px;
+        font-weight: bolder;
+        color: #2e294e98;
     }
     td {
     
@@ -389,30 +397,117 @@ table .center{
         height: 25px;
         margin: 0px 20px;
     }
-    .dtls{
+
+    .box-container{
+
+        width: 100%; 
+    }
+    .card-container{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center; 
-        padding-left:0px;
-        width: auto; 
+        width: 100%;
+        padding: 0;
     }
-    .card-img{
+    .card-header{
+        border: none;
+    }
+    
+    .card-description{
+        text-align: center;
+    }
+    .card-header img{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .card-description p{
+        margin: 0;
+    }
+
+    .contact_form{  
+        max-width: 100%; 
+        height: auto;
+        margin: 0;
+        padding: 10px;
+    }
+    
+    .formulario input{
+        background-color: #fbfbfb9d; 
+        width: 100%; 
+        height: 40px;   
+        color: #2e294e;  
+    }
+    
+    textarea{
+        background-color: #fbfbfb9d; 
+        width: 100%; 
+        height: 150px; 
+        border-radius: 5px;  
+        border-style: solid; 
+        border-width: 1px; 
+        border-color: #D90368;
+    }
+    
+    label{
+        display: block;  
+    }
+    
+    button{
+        height: 40px; 
+        margin-bottom: 20px;   
+        text-transform: uppercase;
+        background-color: #d90367bd; 
+        border-style: solid; 
+        border-radius: 10px;  
+        width: 90%;   
+        cursor: pointer;
+    }
+        
+    span{
+        color: #2e294e; 
+    }
+    
+    .contact_form p{
+        font-size: 13px; 
+        color: #2e294e; 
+    }
+}
+@media only screen and (max-width: 763px){
+    nav{
         display: flex;
-    
-    } 
-    .card-dtls{ 
-        width: 250px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
     }
     
-    .card-dtls h4{
-        font-size: 15px;
-    }
-    .card-dtls p{
-        font-size: 13px;
+    .logo{
+        max-width: 250px;
+        filter: drop-shadow(5px 5px 15px #efb810);
+        padding: 10px 0px;
     }
     
-    .card-dtls a{
-        font-size: 15px;
+    nav ul li{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 5px;
+        font-size: 18px;
+        margin: 0px;
+    }
+    nav ul{
+        margin-bottom:0px;
+        padding-left: 0px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #2e294e98;
+        width: 100%;
     }
 }
