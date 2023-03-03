@@ -13,9 +13,8 @@ function createEvents(){
                 <div class="card-body">
                 <h4 class="card-title">${event.name}</h4>
                 <p class="card-text">${event.description}</p>
-                <p class="card-text">Date: ${event.date}</p>
                 <p class="card-text">Price: $ ${event.price}</p>
-                <a href="./details.html">More details</a>
+                <a href="./details.html?_id=${event._id}">More details</a>
                 </div>
                 <div class="card-body">
                     <button class="button-font" type="button" name="buy" id="buy">BUY</button>
