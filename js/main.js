@@ -27,7 +27,7 @@ function createEvents(){
 
 function printEvents (){
     let cards = document.getElementById('cardEvents');
-    cards.innerHTML= eventCards.join('')
+    cards.innerHTML= eventCards.join("")
 }
 
 createEvents();

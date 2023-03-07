@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;700&display=swap');
+
+
 *{
     box-sizing: border-box;
     margin: 0px;
@@ -27,8 +29,9 @@ body{
 
 .logo{
     max-width: 250px;
-    filter: drop-shadow(5px 5px 5px rgb(192, 192, 192));
+    filter: drop-shadow(3px 3px 5px rgb(192, 192, 192)) brightness(1.50);
     padding-left: 50px;
+
 }
 
 nav ul li{
@@ -37,6 +40,7 @@ nav ul li{
     padding: 10px 20px;
     font-size: 18px;
     margin: 0;
+    filter: drop-shadow(1px 1px 1px  #d90367dc) brightness(1.20);
 }
 
 .slice{
@@ -55,8 +59,16 @@ nav ul li{
 }
 .slice h3{
     margin-top: 10px;
-    font-weight: bold;
-    color: #D90368;
+    color: #ffffff00;
+    font-weight: bolder;
+    background-image: url(./assets/glitter.jpg);
+    background-position: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    filter: brightness(1.5);
+    letter-spacing: 2px;
+    font-size: 30px;
+    background-size: 0.98;
 }
 .slice a{
     text-decoration: none;
@@ -70,11 +82,12 @@ nav ul li{
     justify-content: center;
     flex-wrap: wrap;
     margin: 20px 0px;
+    filter: drop-shadow(1px 1px 1px  #d903679a) brightness(1.20);
 }
 
 input.src{
     padding: 10px;
-    background-color: #fffcfcde;
+    background-color: #fffcfc85;
     color:#2e294e;
     font: 14px;
     letter-spacing: 1px;
@@ -96,7 +109,7 @@ input.src{
     padding: 20px 0px;
 }
 .card{
-    background-color: rgba(210, 210, 210, 0.692) !important;
+    background-color: #fffcfc8a !important;
     border: none !important;
     padding: 10px;
     margin: 10px;
@@ -104,8 +117,9 @@ input.src{
     color: #2e294e;
 }
 .card h4{
-    color: #2e294e;
+    color: #7e023ca8;
     font-weight: bolder;
+    filter: drop-shadow(1px 1px 1px rgb(194, 194, 194)) brightness(1.30);
 }
 .card p{
     color: #2e294e;
@@ -173,8 +187,8 @@ form{
     border-radius: 10px;  
     padding-top: 30px;
     padding-bottom: 20px;  
-    background-color: #7468c05b; 
-    padding-left: 30px; 
+    background-color: #fffcfc8a; 
+    padding-left: 30px;
 }
 
 .formulario input{
@@ -206,35 +220,46 @@ textarea{
     color: #2e294e; 
 }
 
-label{
-    display: block;  
+.formulario label{
+    display: block;
+    color: #7e023ca8;
+    font-weight: bolder;
+    filter: drop-shadow(1px 1px 1px rgb(194, 194, 194)) brightness(1.30);
+  
 }
 
 button{ 
 
     width: 100%;
     text-transform: uppercase;
-    background-color: #ff64acbb; 
+    background:none;
     border-style: solid; 
-    border-radius: 10px;  
+    border-radius: 5px;    
     cursor: pointer; 
     height: 40px;  
     border-width: 1px; 
-    border-color: #D90368; 
+    border-color: #C0C0C0; 
     margin-top: 10px;  
-    color: #2e294e;
     font-weight: bold;
+    
 }
 
-.button-font{
-    color: #2e294e; 
+.button-font{ 
     font-size: 18px;
     font-weight:bold;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 0;
+    color: #C0C0C0;
+    filter: drop-shadow(3px 3px 5px rgb(207, 207, 207)) brightness(1.30);
 }
+button:hover{
+    background:#C0C0C0;
+    color: #2e294e;
+    filter: drop-shadow(3px 3px 5px rgb(0, 0, 0)) brightness(1.20);
+}
+
 
 span{
     color: #2e294e; 
@@ -279,9 +304,9 @@ span{
 
 th{
     font-size: 20px;
-    color: #D90368;
+    color: #7e023ca8;
     font-weight: bolder;
-    text-shadow: 1px 1px 2px rgb(210, 210, 210);
+    filter: drop-shadow(1px 1px 1px rgb(104, 104, 104)) brightness(1.20);
 }
 td {
     color:  #2e294e;
@@ -330,8 +355,7 @@ table .center{
     }
     .slice h3{
         margin-top: 10px;
-        font-weight: bold;
-        color: #D90368;
+
         font-size: 20px;
     }
     .slice a{
