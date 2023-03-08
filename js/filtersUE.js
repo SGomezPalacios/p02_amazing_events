@@ -35,9 +35,12 @@ let selectors = (idText, idChecks, arrayEvents) => {
         ) && (
             each.date > data.currentDate
         ))
-
     })
-    printCards("cardUpcomingEvents", filterEvents)
+    if (filterEvents.length > 0){
+        printCards("cardUpcomingEvents", filterEvents)
+    } else {
+        templateNF("#cardUpcomingEvents")
+    }
 
 }
 

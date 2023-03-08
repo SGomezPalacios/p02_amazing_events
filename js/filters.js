@@ -19,13 +19,6 @@ let printCards = (id_html, arrayEvents) => {
     let templates = arrayEvents.map(templateFilter).join('')
     selector.innerHTML = templates
 }
-let printCardsNF = () => {
-    return `
-    <div class="card card-details">
-        <img src="./src/assets/eventNF.jpg" class="card-img-top img-category" alt="...">
-    </div>`
-
-}
 
 let selectors = (idText, idChecks, arrayEvents) => {
     let inputText = document.querySelector(`#${idText}`).value
@@ -39,13 +32,11 @@ let selectors = (idText, idChecks, arrayEvents) => {
             inputChecks.includes(each.category))
             )
     })
-    printCards("cardEvents", filterEvents)
-    /* if (filterEvents.length > 0){
+    if (filterEvents.length > 0){
         printCards("cardEvents", filterEvents)
     } else {
-        printCardsNF()
-    } */
-
+        templateNF("#cardEvents")
+    }
 
 }
 
