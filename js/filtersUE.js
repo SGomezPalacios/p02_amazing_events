@@ -12,40 +12,32 @@ let templateFilter = (data) => {
             <button class="button-font" type="button" name="buy" id="buy">BUY</button>
         </div>
     </div>`
-} 
+    }
 
 let printCards = (id_html, arrayEvents) => {
     let selector = document.querySelector(`#${id_html}`)
     let templates = arrayEvents.map(templateFilter).join('')
     selector.innerHTML = templates
-}
-let printCardsNF = () => {
-    return `
-    <div class="card card-details">
-        <img src="./src/assets/eventNF.jpg" class="card-img-top img-category" alt="...">
-    </div>`
-
+/*     console.log(templates) */
 }
 
 let selectors = (idText, idChecks, arrayEvents) => {
     let inputText = document.querySelector(`#${idText}`).value
     let inputChecks = Array.from(document.querySelectorAll(`.${idChecks}:checked`)).map(each => each.value)
+    console.log(inputText)
     let filterEvents = arrayEvents.filter(each => {
-        return (( each.name.toLowerCase().includes(inputText.toLowerCase().trim()) || 
+        return ((
+            each.name.toLowerCase().includes(inputText.toLowerCase().trim()) ||
             each.description.toLowerCase().includes(inputText.toLowerCase().trim()) || 
             each.place.toLowerCase().includes(inputText.toLowerCase().trim())
-            ) && (
-            inputChecks.length === 0 ||
-            inputChecks.includes(each.category))
-            )
-    })
-    printCards("cardEvents", filterEvents)
-    /* if (filterEvents.length > 0){
-        printCards("cardEvents", filterEvents)
-    } else {
-        printCardsNF()
-    } */
+        ) && (
+            inputChecks.length === 0 || inputChecks.includes(each.category)
+        ) && (
+            each.date > data.currentDate
+        ))
 
+    })
+    printCards("cardUpcomingEvents", filterEvents)
 
 }
 
