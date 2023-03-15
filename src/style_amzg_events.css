@@ -311,8 +311,14 @@ th{
 td {
     color:  #2e294e;
     text-shadow: 1px 1px 1px rgb(210, 210, 210);
-    font-size: 18px;
+    font-size: 17px;
 }
+
+.rows{
+    color:  #534d7e;
+    font-size: 15px;
+}
+
 tr{
     background-color: transparent;
 }
