@@ -14,10 +14,7 @@ function captureData(){
     }
     /* console.log(dataContact) */
     return dataContact;
-
 }
-
-
 
 function alertContact(){
     swal({

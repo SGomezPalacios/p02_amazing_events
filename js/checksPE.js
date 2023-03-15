@@ -23,6 +23,8 @@ let printChecks = (id, categories) => {
 }
 
 printChecks('cateChecksPE', cateChecks) */
+
+/* API */
 async function printCategories(){
     let urlAPI = "https://mh.up.railway.app/api/amazing-events?time=past"
     let fetchResponse = await fetch(urlAPI)

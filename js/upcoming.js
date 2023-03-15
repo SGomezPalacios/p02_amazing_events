@@ -86,7 +86,7 @@ async function fetchApi(){
                 )
         })
         createEvents(filterEvents)
-        /* printEvents('#cardEvents', response.events); */
+        
     } catch(error){
         console.log('ocurrio un error')
         console.log(error) 

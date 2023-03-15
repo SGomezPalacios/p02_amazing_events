@@ -23,8 +23,8 @@ let printChecks = (id, categories) => {
 }
 
 printChecks('cateChecks', cateChecks)
-
  */
+
 /* API */
 async function printCategories(){
     let urlAPI = "https://mh.up.railway.app/api/amazing-events"

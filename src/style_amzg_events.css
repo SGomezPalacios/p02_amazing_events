@@ -225,7 +225,6 @@ textarea{
     color: #7e023ca8;
     font-weight: bolder;
     filter: drop-shadow(1px 1px 1px rgb(194, 194, 194)) brightness(1.30);
-  
 }
 
 button{ 
@@ -271,10 +270,12 @@ span{
 }
 
 ::-webkit-input-placeholder {
-   color: #2e294e;
+    color:  #534d7e;
+    font-size: 13px;
 }
 ::-webkit-textarea-placeholder {
-   color: #2e294e;
+    color:  #534d7e;
+    font-size: 13px;
 }
 
 .formulario input:focus{
@@ -300,6 +301,7 @@ span{
     border-radius: 5px;
     border: hidden;
     margin: 10px;
+    text-align: center;
 }
 
 th{
@@ -307,6 +309,7 @@ th{
     color: #7e023ca8;
     font-weight: bolder;
     filter: drop-shadow(1px 1px 1px rgb(104, 104, 104)) brightness(1.20);
+
 }
 td {
     color:  #2e294e;

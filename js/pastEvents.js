@@ -1,38 +1,3 @@
-/* console.log(data)
-
-const eventos = data.events;
-console.log(eventos);
-
-let currentDate = data.currentDate;
-console.log(currentDate);
-let pastEvents=[];
-
-function createPastEvents(){
-    for(let elemento of eventos){
-        if(elemento.date < currentDate){
-            let pastCards = 
-                `<div class="card card-details">
-                    <img src="${elemento.image}" class="card-img-top img-category" alt="...">
-                    <div class="card-body">
-                    <h4 class="card-title">${elemento.name}</h4>
-                    <p class="card-text">${elemento.description}</p>
-                    <a href="./details.html?_id=${elemento._id}">More details</a>
-                    </div>
-                    <div class="card-body">
-                        <button class="button-font" type="button" name="buy" id="buy">BUY</button>
-                    </div>
-                </div>`
-        
-            pastEvents.push(pastCards);
-            console.log(pastEvents);
-        }
-    }    
-    let pastCards = document.getElementById('cardPastEvents');
-    pastCards.innerHTML= pastEvents.join('')
-}
-
-createPastEvents();
- */
 function createEvents(filterEvents){
     if (filterEvents.length > 0){    
         let eventCards= [];
@@ -86,7 +51,7 @@ async function fetchApi(){
                 )
         })
         createEvents(filterEvents)
-        /* printEvents('#cardEvents', response.events); */
+
     } catch(error){
         console.log('ocurrio un error')
         console.log(error) 
