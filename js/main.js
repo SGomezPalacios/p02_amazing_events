@@ -37,15 +37,15 @@ function createEvents(filterEvents){
         let cards
         for(let event of filterEvents){
             cards = 
-                `<div class="card card-details">
+                `<div class="card card-details d-flex flex-column justify-content-between" style="height: 590px">
                     <img src="${event.image}" class="card-img-top img-category" alt="...">
-                    <div class="card-body">
-                    <h4 class="card-title">${event.name}</h4>
-                    <p class="card-text">${event.description}</p>
-                    <p class="card-text">Price: $ ${event.price}</p>
-                    <a href="./details.html?id=${event.id}">More details</a>
+                    <div class="card-body" style="height: 220px" >
+                        <h4 class="card-title">${event.name}</h4>
+                        <p class="card-text">${event.description}</p>
+                        <p class="card-text">Price: $ ${event.price}</p>
+                        <a href="./details.html?id=${event.id}">More details</a>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" style="padding-bottom: 0px">
                         <button class="button-font" type="button" name="buy" id="buy">BUY</button>
                     </div>
                 </div>`
