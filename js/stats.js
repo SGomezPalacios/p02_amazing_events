@@ -9,16 +9,27 @@ async function table1(){
         let array_events = response.events
         console.log(array_events)
 
-        array_events = array_events.sort((ev1, ev2) => ev1.assistance - ev2.assistance)
-        document.getElementById("max_ass").innerHTML = array_events[array_events.length-1].name
-        document.getElementById("maxAss_value").innerHTML = array_events[array_events.length-1].assistance
-        document.getElementById("min_ass").innerHTML = array_events[0].name
-        document.getElementById("minAss_value").innerHTML = array_events[0].assistance
+        let stats = array_events.map(each=> {
+            let stats_event = {
+                name: each.name,
+                percent: 100 * each.assistance / each.capacity
+            }
+            return stats_event
+        }).sort((ev1, ev2) => ev1.percent - ev2.percent)
         
-        array_events = array_events.sort((ev1, ev2) => ev1.capacity - ev2.capacity)
-        document.getElementById("max_cap").innerHTML = array_events[array_events.length-1].name
-        document.getElementById("maxCap_value").innerHTML = array_events[array_events.length-1].capacity
-        
+        let stats_cap = array_events.map(each=> {
+            let stats_event = {
+                name: each.name,
+                capacity: each.capacity
+            }
+            return stats_event
+        }).sort((ev1, ev2) => ev1.capacity - ev2.capacity)
+        console.log(stats)
+        console.log(stats[0])
+        console.log(stats[stats.length-1])
+
+        document.getElementById("table1").innerHTML = template_table1(stats[stats.length-1], stats[0], stats_cap[stats_cap.length-1])
+
     } catch(error){
         console.log('ocurrio un error')
         console.log(error) 
@@ -26,6 +37,14 @@ async function table1(){
 }
 
 table1()
+
+function template_table1(max, min, max_cap){
+    return `<tr>
+        <td class="rows">${max.name}: ${parseInt(max.percent)}%</td>
+        <td class="rows">${min.name}: ${parseInt(min.percent)}%</td>
+        <td class="rows">${max_cap.name}: ${max_cap.capacity}</td>
+    </tr>`
+}
 
 async function table2(){
     /* Traigo valores futuros de la API, hago un array de las categorias, 
@@ -48,7 +67,7 @@ async function table2(){
         }
         
         for (let each of array_events){
-            each.profit = each.estimate * each.price  
+            each.profit = each.estimate * each.price
         }
 
         let rows_table2 = []
