@@ -32,11 +32,11 @@ async function printCategories(){
     let array_events = response.events
 
     let cateChecks = []
-    for (let each of array_events){
+    array_events.forEach(each =>{
         if(!cateChecks.includes(each.category)){
             cateChecks.push(each.category)
         }
-    }
+    })
 
     let printChecks = []
     for (let category of cateChecks){
