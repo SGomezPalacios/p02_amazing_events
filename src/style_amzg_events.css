@@ -354,6 +354,14 @@ table .center{
 .check-padd input{
     margin-left: 10px;
 }
+.card-description{
+    position: relative;
+}
+.card-description p{
+    margin: 20px;
+}
+
+
 
 @media only screen and (max-width: 720px){
     nav{
