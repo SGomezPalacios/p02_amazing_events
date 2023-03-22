@@ -10,25 +10,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body class="container-fluid">
-    <header class="header">
-      <nav>
-        <img class="logo" src="./src/assets/amzg_events_logo.png" alt="amazing events logo">
-        <ul>
-          <li>
-            <a class="nav-link" href="./index.html">Home</a>
-          </li>
-          <li>
-            <a class="nav-link" href="./past_events.html">Past Events</a>
-          </li>
-          <li>
-            <a class="nav-link" href="./contact.html">Contact</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#">Stats</a>
-          </li>
-        </ul>
+  <header class="header">
+    <div>
+      <img class="logo" src="./src/assets/amzg_events_logo.png" alt="amazing events logo">
+    </div>
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li>
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li>
+                <a class="nav-link" href="./upcoming.html">Upcoming Events</a>
+              </li>
+              <li>
+                <a class="nav-link" href="./past_events.html">Past Events</a>
+              </li>
+              <li>
+                <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#">Stats</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
-    </header>
+    </div>
+</header>
     <main>
         <div>
           <fieldset class="slice">
@@ -40,59 +54,51 @@
         <fieldset class="container">
           <div class="stats_table">
             <div>              
+                <table  class="table">
+                  <thead>
+                    <tr>
+                      <th colspan="3">Events statistics</th>
+                  </tr>
+                  <tr>
+                      <td>Highest percentage of attendance</td>
+                      <td>Lowest percentage of attendance</td>
+                      <td>Larger capacity</td>
+                  </tr>
+                  </thead>
+                  <tbody id="table1">
+                    <!-- table1 stats.js -->
+                  </tbody>
+                </table>
                 <table class="table">
-                    <tbody>
-                        <tr>
-                            <th colspan="3">Events statistics</th>
-                        </tr>
-                        <tr>
-                            <td>Events with the highest percentage of attendance</td>
-                            <td>Events with the lowest percentage of attendance</td>
-                            <td>Events with larger capacity</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th colspan="3">Upcoming events statics by category</th>
-                        </tr>
+                  <thead>
+                    <tr>
+                      <th colspan="3">Past events statics by category</th>
+                  </tr>
+                  <tr>
+                      <td>Categories</td>
+                      <td>Revenues</td>
+                      <td>Percentage of attendance</td>
+                  </tr>
+                  </thead>
+                  <tbody id="table2">  
+                      <!-- table2 stats.js -->
+                  </tbody>
+                </table>
 
-                        <tr>
-                            <td>Categories</td>
-                            <td>Revenues</td>
-                            <td>Percentage of attendance</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th colspan="3">Past Events statistic by category</th>
-                        </tr>
-                        <tr>
-                            <td>Categories</td>
-                            <td>Revenues</td>
-                            <td>Percentage of attendance</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th colspan="3">Upcoming statistic by category</th>
+                    </tr>
+                    <tr>
+                        <td>Categories</td>
+                        <td>Revenues</td>
+                        <td>Percentage of attendance</td>
+                    </tr>
+                  </thead>
+                  <tbody id="table3">
+                    <!-- table3 stats.js -->
+                  </tbody>
                 </table>
             </div>  
           </div>
@@ -105,11 +111,12 @@
         <a href="" title="instagram iconos"><img class="icons" src="./src/assets/whatsapp.png" alt="logo-whatsapp"></a>  
       </fieldset>
       <fieldset>
-        <h5>Cohort</h5>
+        <h5>A. Sofía Gómez Palacios - FE05-TN MH-AP</h5>
       </fieldset>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
+    <script src="./js/stats.js"></script>
+  </body>
 </html>
 
 
