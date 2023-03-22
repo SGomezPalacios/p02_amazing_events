@@ -59,7 +59,7 @@ function createDetail(cardEvents){
 
 function printDetail(id, cardEvents, array_data){
     let detailsCard = document.querySelector(id)
-    let cardsEvents = array_data.find(each => each.id == cardEvents)
+    let cardsEvents = array_data.find(each => each.id === cardEvents)
     let detail = createDetail(cardsEvents)
     detailsCard.innerHTML = detail
 }
