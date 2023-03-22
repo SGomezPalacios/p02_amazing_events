@@ -64,7 +64,7 @@ async function table_2(){
         let events_category = array_categories.map(each => array_events.filter(event => event.category === each))
 
         /* console.log(events_category) */
-    
+        
         events_category = events_category.map(each => {
             return each.reduce((acc, every) => {
                 let statis = {
@@ -117,7 +117,6 @@ async function table_3(){
         /* console.log(array_categories) */
         
         let events_category = array_categories.map(each => array_events.filter(event => event.category === each))
-
         /* console.log(events_category) */
     
         events_category = events_category.map(each => {
@@ -139,7 +138,7 @@ async function table_3(){
             }
             )
         })
-        /* console.log(events_category) */
+        //console.log(events_category)
         document.getElementById("table3").innerHTML = events_category.map(each => template_table2(each.category, each.profit, each.perc_estimate)).join('')
         
     } catch(error){
