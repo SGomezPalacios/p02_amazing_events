@@ -31,12 +31,13 @@ function createEvents(){
 }
 
 /* API */
+let urlAPI = 'https://mh.up.railway.app/api/amazing-events'
+
 function createEvents(filterEvents){
     if (filterEvents.length > 0){    
         let eventCards= [];
-        let cards
         for(let event of filterEvents){
-            cards = 
+            let cards = 
                 `<div class="card card-details d-flex flex-column justify-content-between" style="height: 590px">
                     <img src="${event.image}" class="card-img-top img-category" alt="...">
                     <div class="card-body" style="height: 220px" >
@@ -64,30 +65,25 @@ function createEvents(filterEvents){
 
 async function fetchApi(){
     try {
-        let urlAPI = 'https://mh.up.railway.app/api/amazing-events'
         let fetchResponse = await fetch(urlAPI)
-        console.log(fetchResponse)
         let response = await fetchResponse.json()
-        console.log(response)
         let array_events = response.events
-        console.log(array_events)
+        /* console.log(array_events) */
 
         let inputText = document.getElementById("name").value
         let inputChecks = Array.from(document.querySelectorAll(".checks:checked")).map(each => each.value)
         let filterEvents = array_events.filter(each => {
-            return (( each.name.toLowerCase().includes(inputText.toLowerCase().trim()) || 
-                each.description.toLowerCase().includes(inputText.toLowerCase().trim()) || 
-                each.place.toLowerCase().includes(inputText.toLowerCase().trim())
+            return (( each.name.toLowerCase().includes(inputText.toLowerCase().trim()) || each.place.toLowerCase().includes(inputText.toLowerCase().trim())
                 ) && (
-                inputChecks.length === 0 ||
-                inputChecks.includes(each.category))
+                inputChecks.length === 0 || inputChecks.includes(each.category))
                 )
         })
         createEvents(filterEvents)
+        /* console.log(filterEvents) */
 
     } catch(error){
         console.log('ocurrio un error')
-        console.log(error) 
+        console.log(error)
     }
 }
 

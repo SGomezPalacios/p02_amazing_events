@@ -26,11 +26,9 @@ printChecks('cateChecksPE', cateChecks) */
 
 /* API */
 async function printCategories(){
-    let urlAPI = "https://mh.up.railway.app/api/amazing-events?time=past"
-    let fetchResponse = await fetch(urlAPI)
-    console.log(fetchResponse)
+    let urlAPI = "https://mh.up.railway.app/api/amazing-events"
+    let fetchResponse = await fetch(urlAPI +'?time=past')
     let response = await fetchResponse.json()
-    console.log(response)
     let array_events = response.events
 
     let cateChecks = []
@@ -41,9 +39,8 @@ async function printCategories(){
     }
 
     let printChecks = []
-    let cate
     for (let category of cateChecks){
-        cate = `
+        let cate = `
         <div class="check-padd">
             <input class="checks" type="checkbox" onclick="fetchApi()" name="category" id="${category}" value="${category}">
             <label for="${category}">${category}</label>

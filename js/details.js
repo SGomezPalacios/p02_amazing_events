@@ -32,9 +32,12 @@ function printDetail(id, cardEvents, array_data){
 printDetail(`#cardDetails`, id, dates)
  */
 
+/* Con API */
+let urlAPI = 'https://mh.up.railway.app/api/amazing-events'
+
 let query = location.search;
 let params = new URLSearchParams(query);
-console.log(params)
+/* console.log(params) */
 let id = params.get("id");
 
 function createDetail(cardEvents){ 
@@ -66,15 +69,12 @@ function printDetail(id, cardEvents, array_data){
 
 async function fetchApi(){
     try {
-        let urlAPI = 'https://mh.up.railway.app/api/amazing-events'
         let fetchResponse = await fetch(urlAPI)
-        console.log(fetchResponse)
         let response = await fetchResponse.json()
-        console.log(response)
         let array_events = response.events
-        console.log(array_events)
+        /* console.log(array_events) */
 
-        printDetail(`#cardDetails`, id, response.events)
+        printDetail(`#cardDetails`, id, array_events)
 
     } catch(error){
         console.log('ocurrio un error')

@@ -1,12 +1,10 @@
 let urlAPI = 'https://mh.up.railway.app/api/amazing-events'
-async function table1(){
+async function table_1(){
     try {
         let fetchResponse = await fetch(urlAPI +'?time=past')
-        //console.log(fetchResponse)
         let response = await fetchResponse.json()
-        //console.log(response)
         let array_events = response.events
-        //console.log(array_events)
+        /* console.log(array_events) */
 
         let stats_perc = array_events.map(each=> {
             let stats_event = {
@@ -17,11 +15,9 @@ async function table1(){
         }).sort((ev1, ev2) => ev1.percent - ev2.percent)
         
         let fetchResponse_all = await fetch(urlAPI)
-        //console.log(fetchResponse)
         let response_all = await fetchResponse_all.json()
-        //console.log(response)
         let array_events_all = response_all.events
-        //console.log(array_events)
+        /* console.log(array_events_all) */
         let stats_cap = array_events_all.map(each=> {
             let stats_event_all = {
                 name: each.name,
@@ -29,7 +25,7 @@ async function table1(){
             }
             return stats_event_all
         }).sort((ev1, ev2) => ev1.capacity - ev2.capacity)
-        console.log(stats_perc)
+        /* console.log(stats_perc) */
 
         document.getElementById("table1").innerHTML = template_table1(stats_perc[stats_perc.length-1], stats_perc[0], stats_cap[stats_cap.length-1])
 
@@ -39,7 +35,7 @@ async function table1(){
     }
 }
 
-table1()
+table_1()
 
 function template_table1(max, min, max_cap){
     return `<tr>
@@ -50,13 +46,10 @@ function template_table1(max, min, max_cap){
     `
 }
 
-async function table2(){
+async function table_2(){
     try {
-        let urlAPI = 'https://mh.up.railway.app/api/amazing-events?time=past'
-        let fetchResponse = await fetch(urlAPI)
-        /* console.log(fetchResponse) */
+        let fetchResponse = await fetch(urlAPI +'?time=past')
         let response = await fetchResponse.json()
-        /* console.log(response) */
         let array_events = response.events
         /* console.log(array_events) */
 
@@ -66,11 +59,11 @@ async function table2(){
                 array_categories.push(each.category)
             }
         })
-        console.log(array_categories)
+        /* console.log(array_categories) */
 
         let events_category = array_categories.map(each => array_events.filter(event => event.category === each))
 
-        console.log(events_category)
+        /* console.log(events_category) */
     
         events_category = events_category.map(each => {
             return each.reduce((acc, every) => {
@@ -99,7 +92,7 @@ async function table2(){
         console.log(error) 
     }
 }
-table2()
+table_2()
 
 function template_table2(cate, profit, perc){
     return `
@@ -111,24 +104,21 @@ function template_table2(cate, profit, perc){
     `
 }
 
-async function table3(){
+async function table_3(){
     try {
-        let urlAPI = 'https://mh.up.railway.app/api/amazing-events?time=upcoming'
-        let fetchResponse = await fetch(urlAPI)
-        /* console.log(fetchResponse) */
+        let fetchResponse = await fetch(urlAPI +'?time=upcoming')
         let response = await fetchResponse.json()
-        /* console.log(response) */
         let array_events = response.events
         /* console.log(array_events) */
 
         let array_categories = array_events.map(each => each.category)
         array_categories= new Set(array_categories)
         array_categories= [...array_categories]
-        //console.log(array_categories)
+        /* console.log(array_categories) */
         
         let events_category = array_categories.map(each => array_events.filter(event => event.category === each))
 
-        console.log(events_category)
+        /* console.log(events_category) */
     
         events_category = events_category.map(each => {
             return each.reduce((acc, every) => {
@@ -149,7 +139,7 @@ async function table3(){
             }
             )
         })
-        //console.log(events_category)
+        /* console.log(events_category) */
         document.getElementById("table3").innerHTML = events_category.map(each => template_table2(each.category, each.profit, each.perc_estimate)).join('')
         
     } catch(error){
@@ -157,7 +147,7 @@ async function table3(){
         console.log(error) 
     }
 }
-table3()
+table_3()
 
 function template_table3(cate, profit, perc){
     return `
