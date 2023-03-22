@@ -1,3 +1,4 @@
+/* ENTREGA TASK 3: */
 /* let cateChecks = []
 data.events.forEach(each => {
     if(!cateChecks.includes(each.category)){
@@ -25,7 +26,7 @@ let printChecks = (id, categories) => {
 printChecks('cateChecks', cateChecks)
  */
 
-/* API */
+/* Con API */
 async function printCategories(){
     let urlAPI = "https://mh.up.railway.app/api/amazing-events"
     let fetchResponse = await fetch(urlAPI)

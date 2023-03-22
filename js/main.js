@@ -1,3 +1,4 @@
+/* ENTREGA TASK 3: */
 /* console.log(data)
 
 const eventos = data.events;
@@ -30,7 +31,7 @@ function createEvents(){
     printEvents();
 }
 
-/* API */
+/* Con API */
 let urlAPI = 'https://mh.up.railway.app/api/amazing-events'
 
 function createEvents(filterEvents){
