@@ -1,4 +1,6 @@
+/* API */
 let urlAPI = 'https://mh.up.railway.app/api/amazing-events'
+
 async function table_1(){
     try {
         let fetchResponse = await fetch(urlAPI +'?time=past')
@@ -46,6 +48,8 @@ function template_table1(max, min, max_cap){
     `
 }
 
+/* Table2 realizada con .reduce donde acc es el acumulador, every son todos los datos, y de valor inicial 
+tiene un objeto con las propiedades en su valor inicial*/
 async function table_2(){
     try {
         let fetchResponse = await fetch(urlAPI +'?time=past')
@@ -104,6 +108,8 @@ function template_table2(cate, profit, perc){
     `
 }
 
+/* Table3 realizada con .set para filtrar las categorías y .reduce donde acc es el acumulador, 
+every son todos los datos, y de valor inicial tiene un objeto con las propiedades en su valor inicial*/
 async function table_3(){
     try {
         let fetchResponse = await fetch(urlAPI +'?time=upcoming')
